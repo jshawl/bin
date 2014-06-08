@@ -1,0 +1,9 @@
+#!/bin/bash
+
+HOST='jshawl.com'
+PATH='/var/www/jshawl.com/locker/'
+
+for i in $@; do
+  echo 'scp' $i $HOST':'$PATH
+  echo `md5sum $i`
+done
